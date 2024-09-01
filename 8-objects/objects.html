@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Objects</title></head>
+  <body>
+    <script>
+
+      //object = groups multiple values together .  (property - value pairs)
+
+      // const product = {
+      //   name: 'socks',
+      //   price: 1090
+      // };
+      // console.log(product);
+      // console.log(product.name);
+      // console.log(product.price); 
+
+      // product.name='cotton socks';
+      // console.log(product);
+      
+      // product.newProperty = 'one';
+      // console.log(product);
+
+      // delete product.name;
+      // console.log(product);
+
+      const product2 ={
+        name:'shirt',
+        'delivery-time' :'1 day',
+        rating : {
+          stars:4.5,
+          count:87
+        },
+        to: function function1(){
+          console.log('function inside object');
+          
+        }
+      };
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);  
+      
+      /* properties that are not wok with . notation
+      example   console.log(product2.delivery-time); because it consider (-) as subraction 
+      with in brackets we can use multiple types
+      default is . notation */
+
+      console.log(product2['delivery-time']); 
+      console.log(product2.rating.count);
+      product2.to();
+      
+      console.log(typeof console.log);
+      console.log(typeof console);
+      console.log(typeof Math);                     
+      console.log(typeof Math.random);
+
+      /* object + function = method 
+       
+      >> built-in objects : they are provided by the language
+      >> built-in objects = 1). JSON  2). localStorage
+      >> JSON - Javascript Object Notation , similar to JS syntax
+      >> JSON doesnt support single qoetes (''). 
+      >> All strings and properties is in " ". Doenst support functions.less features.It is more universal.
+      >> we use JSON 
+          >> when we send data b/t computers.That might use different programming languages.
+          >> when we store data
+          >>Built-in JSON Converts:
+                JS Obect -> JSON -> we use JSON.stringify(object name)  
+                
+                JSON TO JS object -> we use JSON.parse(JSON name)*/
+
+
+    console.log(JSON.stringify(product2));
+
+    const jsonString = JSON.stringify(product2);
+
+    console.log(JSON.parse(jsonString));
+
+    /* localStorage 
+     >> save values more permanently . >> variables are temporary . >> if we refresh/ close the page all the variables are deleted. 
+      
+      
+      
+      
+      
+
+    </script>
+  </body>
+</html> 
+
+
